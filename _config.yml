@@ -82,13 +82,13 @@ analytics:
 # Site Author
 author:
   name             : "Nimrod Shaham"
-  avatar           : "assets/pic_nimrod.jpg"
+  avatar           : "pic_nimrod.png"
   bio              : "Physicist and theoretical neuroscientist. Loves complex, stochastic and chaotic systems. In addition to writing simulations, I enjoy desert hikes, biking, cooking and reading (mostly science fiction)."
   location         : "Cambridge, MA, USA"
   employer         : "Harvard University"
   pubmed           : 
   googlescholar    : "http://scholar.google.com/citations?user=FB-PaskAAAAJ&hl=en"
-  email            :
+  email            :  "mailto:nshaham@fas.harvard.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -106,7 +106,7 @@ author:
   linkedin         : "https://il.linkedin.com/in/nimrod-shaham-16735465"
   orcid            : 
   pinterest        :
-  soundcloud       :
+  soundcloud       : "https://tidal.com/browse/playlist/e0b540ee-712f-48f9-ba6c-ccc5bb316e60"
   stackoverflow    : 
   steam            :
   tumblr           :
