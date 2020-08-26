@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-[CV file](http://academicpages.github.io/files/cv_2020.pdf)
+[CV file](http://nimros01.github.io/files/cv_2020.pdf)
