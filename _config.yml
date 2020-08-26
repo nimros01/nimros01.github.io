@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Nimrod Shaham"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Physicist and theoretical neuroscientist. Loves complex, stochastic and chaotic systems. In addition to writing simulations, I enjoy desert hikes, biking, cooking and reading (mostly science fiction)."
   location         : "Cambridge, MA, USA"
   employer         : "Harvard University"
   pubmed           : 
@@ -115,6 +115,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  tidal            : "https://tidal.com/browse/playlist/e0b540ee-712f-48f9-ba6c-ccc5bb316e60" 
 
 
 # Reading Files
