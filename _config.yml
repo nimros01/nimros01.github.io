@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Nimrod Shaham"
   avatar           : "pic_nimrod.png"
-  bio              : "Physicist and theoretical neuroscientist. Loves complex, stochastic and chaotic systems. In addition to writing simulations, I enjoy desert hikes, biking, cooking and reading (mostly science fiction)."
+  bio              : "Hello there. I am a Physicist and a theoretical neuroscientist, currently a Swartz postdoctoral fellow at Harvard center for brain science. I model learning and memory in neural networks, and I love complex, stochastic and chaotic systems. In addition to writing simulations, I enjoy desert hikes, biking, cooking and reading (mostly science fiction)."
   location         : "Cambridge, MA, USA"
   employer         : "Harvard University"
   pubmed           : 
   googlescholar    : "http://scholar.google.com/citations?user=FB-PaskAAAAJ&hl=en"
-  email            :  "mailto:nshaham@fas.harvard.edu"
+  email            :  "nshaham@fas.harvard.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -97,16 +97,16 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/nimros01"
+  github           : "nimros01"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://il.linkedin.com/in/nimrod-shaham-16735465"
+  linkedin         : "nimrod-shaham-16735465"
   orcid            : 
   pinterest        :
-  soundcloud       : "https://tidal.com/browse/playlist/e0b540ee-712f-48f9-ba6c-ccc5bb316e60"
+  soundcloud       : 
   stackoverflow    : 
   steam            :
   tumblr           :
