@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Nimrod Shaham"
 title_separator          : "-"
 name                     : &name "Nimrod Shaham"
-description              : &description "personal description"
+description              : &description "Algorithms team lead at Mobileye, physicist and theoretical neuroscientist."
 url                      : https://nimros01.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "nimros01.github.io"
@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Nimrod Shaham"
   avatar           : "pic_nimrod.png"
-  bio              : "Physicist and a theoretical neuroscientist. Swartz postdoctoral fellow, Harvard center for brain science."
-  location         : "Cambridge, MA, USA"
-  employer         : "Harvard University"
+  bio              : "Senior technical expert and algorithms team lead at Mobileye. Physicist and theoretical neuroscientist by training."
+  location         : "Israel"
+  employer         : "Mobileye"
   pubmed           : 
   googlescholar    : "http://scholar.google.com/citations?user=FB-PaskAAAAJ&hl=en"
-  email            :  "nshaham@fas.harvard.edu"
+  email            :  "nimros01@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

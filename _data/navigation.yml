@@ -1,19 +1,11 @@
 # main links links
 main:
 
-  - title: "Research projects"
-    url: /projects/ 
+  - title: "Research"
+    url: /research/
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Mobileye"
+    url: /mobileye/
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "CV"
-    url: /cv/
-    
-  
+  - title: "Personal projects"
+    url: /projects/
