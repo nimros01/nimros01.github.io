@@ -1,0 +1,79 @@
+---
+---
+{%- include base_path -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.permalink == "/" %}
+  <title>{{ site.title }} · {{ site.description }}</title>
+  {%- else %}
+  <title>{{ page.title }} · {{ site.title }}</title>
+  {%- endif %}
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | escape }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ site.description | escape }}">
+  <meta property="og:image" content="{{ site.url }}/images/profile.png">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" type="image/svg+xml" href="{{ base_path }}/assets/scifi/favicon.svg">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ base_path }}/assets/scifi/scifi.css?v={{ site.time | date: '%s' }}">
+</head>
+<body class="page-{{ page.slug | default: 'home' }}">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="{{ base_path }}/">Nimrod Shaham<span class="at">.</span></a>
+    <nav class="nav">
+      {%- for link in site.data.navigation.main %}
+      <a href="{{ base_path }}{{ link.url }}" class="{% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
+      {%- endfor %}
+    </nav>
+  </header>
+
+  <main>
+    {%- if page.hero %}
+      {% include scifi/hero.html %}
+    {%- else %}
+    <header class="page-head">
+      <h1 class="title" data-text="{{ page.title }}">{{ page.title }}</h1>
+      {%- if page.tagline %}<p class="tagline">{{ page.tagline }}</p>{% endif %}
+    </header>
+    {%- endif %}
+
+    <div class="layout{% if page.toc %} with-toc{% endif %}">
+      {%- if page.toc %}
+      <aside class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <div class="toc-title">{{ page.toc_label | default: 'On this page' }}</div>
+          <ol id="toc-list"></ol>
+        </div>
+      </aside>
+      {%- endif %}
+      <article class="content{% if page.collapse %} collapsible{% endif %}">
+        {{ content }}
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="links">
+      {%- if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+      {%- if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
+      {%- if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}
+      {%- if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
+    </div>
+    <div class="sig">© {{ site.time | date: '%Y' }} {{ site.name }} · built with Jekyll, served by GitHub Pages</div>
+  </footer>
+
+  <script src="{{ base_path }}/assets/scifi/scifi.js?v={{ site.time | date: '%s' }}" defer></script>
+  {%- if page.sims %}
+  <script src="{{ base_path }}/assets/scifi/sims.js?v={{ site.time | date: '%s' }}" defer></script>
+  {%- endif %}
+</body>
+</html>
