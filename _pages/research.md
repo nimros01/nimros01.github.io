@@ -7,7 +7,7 @@ toc: true
 collapse: true
 toc_label: "Papers"
 sims: true
-tagline: "memory in noisy neural networks · cosmic rays · live toy models of each paper"
+tagline: "Memory in noisy neural networks, cosmic rays, and a live toy model of each paper"
 redirect_from:
   - /publications/
 ---

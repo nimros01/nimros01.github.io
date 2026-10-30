@@ -28,10 +28,10 @@
   <div class="scanlines" aria-hidden="true"></div>
 
   <header class="topbar">
-    <a class="brand" href="{{ base_path }}/"><span class="prompt">&gt;</span> nimrod<span class="at">@</span>shaham<span class="cursor">_</span></a>
+    <a class="brand" href="{{ base_path }}/">Nimrod Shaham<span class="at">.</span></a>
     <nav class="nav">
       {%- for link in site.data.navigation.main %}
-      <a href="{{ base_path }}{{ link.url }}" class="{% if page.url == link.url %}active{% endif %}"><span class="dot">./</span>{{ link.title | downcase | replace: ' ', '-' }}</a>
+      <a href="{{ base_path }}{{ link.url }}" class="{% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
       {%- endfor %}
     </nav>
   </header>
@@ -41,7 +41,6 @@
       {% include scifi/hero.html %}
     {%- else %}
     <header class="page-head">
-      <div class="crumb">~{{ page.url }} <span class="blink">▍</span></div>
       <h1 class="title" data-text="{{ page.title }}">{{ page.title }}</h1>
       {%- if page.tagline %}<p class="tagline">{{ page.tagline }}</p>{% endif %}
     </header>
@@ -51,7 +50,7 @@
       {%- if page.toc %}
       <aside class="toc" aria-label="On this page">
         <div class="toc-inner">
-          <div class="toc-title">// {{ page.toc_label | default: 'index' | downcase }}</div>
+          <div class="toc-title">{{ page.toc_label | default: 'On this page' }}</div>
           <ol id="toc-list"></ol>
         </div>
       </aside>
@@ -64,12 +63,12 @@
 
   <footer class="footer">
     <div class="links">
-      {%- if site.author.github %}<a href="https://github.com/{{ site.author.github }}">github</a>{% endif %}
-      {%- if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">scholar</a>{% endif %}
-      {%- if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">linkedin</a>{% endif %}
-      {%- if site.author.email %}<a href="mailto:{{ site.author.email }}">email</a>{% endif %}
+      {%- if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+      {%- if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
+      {%- if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}
+      {%- if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
     </div>
-    <div class="sig">© {{ site.time | date: '%Y' }} {{ site.name }} · built with Jekyll, served by GitHub Pages · <span class="ok">all systems nominal</span></div>
+    <div class="sig">© {{ site.time | date: '%Y' }} {{ site.name }} · built with Jekyll, served by GitHub Pages</div>
   </footer>
 
   <script src="{{ base_path }}/assets/scifi/scifi.js?v={{ site.time | date: '%s' }}" defer></script>

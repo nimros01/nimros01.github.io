@@ -128,11 +128,11 @@
     });
     if (folds.length) {
       var bar = document.createElement("div"), btn = document.createElement("button");
-      bar.className = "fold-bar"; btn.type = "button"; btn.className = "fold-all"; btn.textContent = "[+] expand all";
+      bar.className = "fold-bar"; btn.type = "button"; btn.className = "fold-all"; btn.textContent = "Expand all";
       btn.addEventListener("click", function () {
         var open = folds.some(function (d) { return !d.open; });
         folds.forEach(function (d) { d.open = open; });
-        btn.textContent = open ? "[-] collapse all" : "[+] expand all";
+        btn.textContent = open ? "Collapse all" : "Expand all";
       });
       bar.appendChild(btn);
       folds[0].parentNode.insertBefore(bar, folds[0]);

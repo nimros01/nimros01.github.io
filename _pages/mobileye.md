@@ -3,7 +3,7 @@ layout: scifi
 title: "Work at Mobileye"
 permalink: /mobileye/
 author_profile: true
-tagline: "decision-making and planning for self-driving cars"
+tagline: "Decision-making and planning for self-driving cars"
 redirect_from:
   - /work/
 ---

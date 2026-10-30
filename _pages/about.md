@@ -20,7 +20,7 @@ them into models and simulations that actually run. Outside work I build small a
 and my family, hike in the desert, bike, cook and read (mostly science fiction).
 
 <div class="grid-3">
-  <a class="card" href="/research/"><span class="k">MODULE 01</span><h4>./research</h4><p>Published papers on memory in noisy neural networks and ultra-high-energy cosmic rays, each with a short summary and a link.</p></a>
-  <a class="card" href="/mobileye/"><span class="k">MODULE 02</span><h4>./mobileye</h4><p>Decision-making and planning for autonomous driving, and leading an algorithms team.</p></a>
-  <a class="card" href="/projects/"><span class="k">MODULE 03</span><h4>./projects</h4><p>Apps I've built end to end, with the architecture, the hard parts and how I solved them.</p></a>
+  <a class="card" href="/research/"><h4>Research</h4><p>Published papers on memory in noisy neural networks and ultra-high-energy cosmic rays, each with a short summary and a link.</p></a>
+  <a class="card" href="/mobileye/"><h4>Mobileye</h4><p>Decision-making and planning for autonomous driving, and leading an algorithms team.</p></a>
+  <a class="card" href="/projects/"><h4>Personal projects</h4><p>Apps I've built end to end, with the architecture, the hard parts and how I solved them.</p></a>
 </div>

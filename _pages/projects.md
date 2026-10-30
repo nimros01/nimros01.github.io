@@ -6,7 +6,7 @@ author_profile: true
 toc: true
 collapse: true
 toc_label: "Projects"
-tagline: "complete products, built end to end in my own time"
+tagline: "Complete products, built end to end in my own time"
 ---
 
 Things I build in my own time, mostly for myself and my family. Each one is a complete product:
