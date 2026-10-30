@@ -106,6 +106,49 @@
     });
   });
 
+  // ---- collapsible sections: each h2 and what follows it becomes a card that expands ----
+  var foldRoot = document.querySelector(".content.collapsible");
+  if (foldRoot) {
+    var folds = [];
+    Array.prototype.slice.call(foldRoot.querySelectorAll(":scope > h2")).forEach(function (h) {
+      var d = document.createElement("details"), sum = document.createElement("summary"), body = document.createElement("div");
+      d.className = "fold"; body.className = "fold-body";
+      h.parentNode.insertBefore(d, h);
+      sum.appendChild(h);
+      var n = d.nextSibling;
+      // the first paragraph (authors or a one-line description) stays visible as a teaser
+      while (n && n.nodeType !== 1) n = n.nextSibling;
+      if (n && n.tagName === "P") { var t = n; n = n.nextSibling; t.classList.add("teaser"); sum.appendChild(t); }
+      while (n && !(n.nodeType === 1 && (n.tagName === "H2" || n.tagName === "HR"))) {
+        var next = n.nextSibling; body.appendChild(n); n = next;
+      }
+      d.appendChild(sum); d.appendChild(body);
+      d.addEventListener("toggle", function () { if (d.open) window.dispatchEvent(new Event("resize")); });
+      folds.push(d);
+    });
+    if (folds.length) {
+      var bar = document.createElement("div"), btn = document.createElement("button");
+      bar.className = "fold-bar"; btn.type = "button"; btn.className = "fold-all"; btn.textContent = "[+] expand all";
+      btn.addEventListener("click", function () {
+        var open = folds.some(function (d) { return !d.open; });
+        folds.forEach(function (d) { d.open = open; });
+        btn.textContent = open ? "[-] collapse all" : "[+] expand all";
+      });
+      bar.appendChild(btn);
+      folds[0].parentNode.insertBefore(bar, folds[0]);
+    }
+    var openHash = function () {
+      var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      var d = el && el.closest ? el.closest("details.fold") : null;
+      if (d && !d.open) { d.open = true; el.scrollIntoView(); }
+    };
+    window.addEventListener("hashchange", openHash); openHash();
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (a && a.getAttribute("href") === location.hash) setTimeout(openHash, 0);
+    });
+  }
+
   // ---- table of contents from h2s, with scroll spy ----
   var list = document.getElementById("toc-list");
   if (list) {

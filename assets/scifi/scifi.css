@@ -192,6 +192,30 @@ figure.sim::after { content: "LIVE"; position: absolute; top: 10px; right: 12px;
 
 @media (max-width: 900px) { .videos { grid-template-columns: 1fr; } }
 
+/* ---------- collapsible sections ---------- */
+.fold-bar { display: flex; justify-content: flex-end; margin: 28px 0 10px; }
+.fold-all { font: 600 12.5px var(--mono); color: var(--cyan); background: none; border: 1px solid var(--line-strong); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+.fold-all:hover { border-color: var(--cyan); box-shadow: 0 0 14px rgba(78,240,255,.25); }
+details.fold { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 14px; transition: border-color .2s, box-shadow .2s; }
+details.fold:hover, details.fold[open] { border-color: var(--line-strong); }
+details.fold[open] { box-shadow: 0 0 30px rgba(78,240,255,.08); }
+details.fold > summary { list-style: none; cursor: pointer; padding: 18px 56px 16px 22px; position: relative; }
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::after {
+  content: "+"; position: absolute; right: 18px; top: 18px; width: 26px; height: 26px; border-radius: 6px;
+  border: 1px solid var(--line-strong); color: var(--cyan); font: 600 16px/24px var(--mono); text-align: center; transition: transform .2s;
+}
+details.fold[open] > summary::after { content: "−"; }
+details.fold > summary:hover::after { box-shadow: 0 0 14px rgba(78,240,255,.35); }
+.content details.fold h2 { margin: 0; padding: 0; border: 0; font-size: clamp(18px, 2.2vw, 22px); }
+details.fold .teaser { margin: 8px 0 0; font-size: 15px; color: var(--muted); }
+.content details.fold .teaser strong { color: var(--text); }
+.fold-body { padding: 0 22px 18px; border-top: 1px dashed var(--line); }
+.fold-body > :first-child { margin-top: 16px; }
+details.fold[open] .fold-body { animation: fold-in .25s ease-out; }
+@keyframes fold-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (max-width: 560px) { details.fold > summary { padding: 14px 48px 12px 16px; } .fold-body { padding: 0 14px 14px; } }
+
 /* ---------- footer ---------- */
 .footer { border-top: 1px solid var(--line); padding: 26px 16px 40px; text-align: center; font: 13px var(--mono); color: var(--muted); }
 .footer .links { display: flex; gap: 18px; justify-content: center; margin-bottom: 10px; flex-wrap: wrap; }

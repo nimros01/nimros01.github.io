@@ -225,7 +225,8 @@
     }
     function loop() {
       if (!visible) { running = false; return; }
-      step(); requestAnimationFrame(loop);
+      if (!step) size();
+      if (step) step(); requestAnimationFrame(loop);
     }
     size();
     window.addEventListener("resize", size);

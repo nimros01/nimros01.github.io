@@ -4,6 +4,7 @@ title: "Personal projects"
 permalink: /projects/
 author_profile: true
 toc: true
+collapse: true
 toc_label: "Projects"
 tagline: "complete products, built end to end in my own time"
 ---

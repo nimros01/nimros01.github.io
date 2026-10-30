@@ -4,6 +4,7 @@ title: "Research"
 permalink: /research/
 author_profile: true
 toc: true
+collapse: true
 toc_label: "Papers"
 sims: true
 tagline: "memory in noisy neural networks · cosmic rays · live toy models of each paper"

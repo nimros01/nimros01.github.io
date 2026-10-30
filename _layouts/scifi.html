@@ -56,7 +56,7 @@
         </div>
       </aside>
       {%- endif %}
-      <article class="content">
+      <article class="content{% if page.collapse %} collapsible{% endif %}">
         {{ content }}
       </article>
     </div>
