@@ -176,6 +176,47 @@ Service worker for offline play; served as static assets from Cloudflare
   validate every field of every stage record, and make records append-only, so history can never
   be rewritten or deleted from the client.
 
-## Music mixer
+## Music Mood Mixer
 
-*Write-up coming soon.*
+Describe a mood, a moment or a memory in your own words, and get a real playlist created in your
+Spotify or Tidal account. A language model picks the songs; the app finds them in the streaming
+catalog and builds the playlist.
+
+### Architecture
+
+```
+Browser (vanilla JS, 3 steps: connect ─► describe ─► playlist)
+        │  same-origin /api calls
+        ▼
+FastAPI backend (one async worker, in Docker), which also serves the front end
+  ├─ auth: Spotify OAuth redirect flow · Tidal device login, polled until done
+  ├─ Gemini: mood text ─► strict JSON list of {artist, title}
+  ├─ catalog search ─► track ids ─► new playlist ─► link back to the user
+  └─ serverless Redis: sessions, tokens, allowlist flags, host playlist index
+```
+
+### Challenges and solutions
+
+- **Two very different logins.** Spotify uses a standard redirect, but Tidal uses a device login
+  that runs as a pending background task in the server. That task can't be stored in a database, so
+  it is held in memory until it completes and only then are plain tokens saved to Redis. The front
+  end opens a popup and polls for the result.
+- **A bug that only appeared in production.** Login polling failed at random after deployment. The
+  cause was four server worker processes, each with its own memory, so the poll often hit a worker
+  that had never seen the login. Since the server is fully asynchronous, one worker handles the load
+  comfortably, and the bug disappeared.
+- **Spotify's five-user limit.** Apps in Spotify's development mode can only write to the accounts
+  of a handful of pre-registered users. After login the app checks whether the user is on that list.
+  If not, it falls back to creating a public playlist on a dedicated host account and returns its
+  link. A Redis sorted set tracks those playlists by age, and they are cleaned up lazily, by age and
+  by count, whenever a new one is made, so no scheduler is needed.
+- **An undocumented API change.** Creating a playlist started returning a bare 403 even with the
+  right permissions. Calling the newer "my playlists" endpoint directly, instead of the client
+  library's legacy one, fixed it.
+- **Reliable output from the model.** The model is instructed to return only a strict JSON list of
+  songs, which is parsed and validated before any song is searched for.
+- **Protecting a paid API.** Prompt length and song count are capped on both client and server,
+  endpoints are rate-limited per IP, CORS is restricted, and model output is inserted as text, never
+  as HTML.
+- **One deployable unit.** The backend serves the front end itself, so all API calls are relative
+  and there is no cross-origin configuration to get wrong between environments.
