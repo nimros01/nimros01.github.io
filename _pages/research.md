@@ -1,10 +1,12 @@
 ---
-layout: single
+layout: scifi
 title: "Research"
 permalink: /research/
 author_profile: true
 toc: true
 toc_label: "Papers"
+sims: true
+tagline: "memory in noisy neural networks · cosmic rays · live toy models of each paper"
 redirect_from:
   - /publications/
 ---
@@ -20,6 +22,8 @@ behavior. You can also find my papers on
 **G. Chechelnizki, N. Shaham, A. Salhov, Y. Burak** · *bioRxiv*, 2025 ·
 [Preprint](https://doi.org/10.1101/2025.01.30.635710)
 
+<figure class="sim" data-sim="ring"><figcaption>Two copies of a ring network each hold an angle as a bump of activity. With fast synapses only (violet) the stored angle wanders; adding slow synapses (cyan) anchors it. A toy illustration, not the paper's model or figures; see the <a href="https://doi.org/10.1101/2025.01.30.635710">preprint</a> for those.</figcaption></figure>
+
 Many memories, such as the direction you are facing or a position in space, are thought to be
 stored as a point on a continuous "manifold" of stable network states. Such memories are fragile:
 noise and imperfections in the connections make the stored value drift. This work shows that
@@ -30,6 +34,8 @@ greatly slow that drift, making memory on neural manifolds robust.
 
 **N. Shaham, J. Chandra, G. Kreiman, H. Sompolinsky** · *Scientific Reports* 12, 13107 (2022) ·
 [Paper](https://www.nature.com/articles/s41598-022-16407-9)
+
+<figure class="sim" data-sim="consolidation"><figcaption>Each line is one memory. Its strength decays, random reactivations kick it up, and memories that cross the threshold are consolidated (green). A toy version of the idea; the real results are in <a href="https://www.nature.com/articles/s41598-022-16407-9">Figs. 2–4 of the paper</a> (open access, CC BY 4.0).</figcaption></figure>
 
 How can the brain keep learning for a lifetime without new memories overwriting old ones? We built
 a recurrent neural network model in which memories are first stored quickly and then consolidated
@@ -43,6 +49,8 @@ and ISFN 2020.
 **N. Ben-Shushan, N. Shaham, M. Joshua, Y. Burak** · *Nature Communications* 13, 1697 (2022) ·
 [Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC8971408/)
 
+<figure class="sim" data-sim="drift"><figcaption>Gaze position (green) diffuses around a fixation target, with an occasional corrective jump. A toy random walk for illustration; the measured drift and the model fits are in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8971408/">the paper</a> (open access, CC BY 4.0).</figcaption></figure>
+
 Even when we fixate on a point, our eyes keep drifting slowly and randomly. This paper asks where
 that drift comes from. Combining a neural network model with eye-movement recordings, we show that
 the statistics of the drift match diffusion generated inside the brain's own circuits for holding
@@ -53,6 +61,8 @@ eye position, rather than noise in the muscles or the periphery. Presented at CO
 **N. Shaham, Y. Burak** · *PLoS Computational Biology* 13(5), e1005505 (2017) ·
 [Paper](https://doi.org/10.1371/journal.pcbi.1005505) ·
 [arXiv](https://arxiv.org/abs/1508.06944)
+
+<figure class="sim" data-sim="balanced"><figcaption>Irregular spiking in a network that remembers an angle: neurons near the remembered angle fire more, and that angle (amber) diffuses slowly. A cartoon of the setup; the analysis is in <a href="https://doi.org/10.1371/journal.pcbi.1005505">the paper</a> (open access, CC BY 4.0).</figcaption></figure>
 
 Cortical networks are "balanced": strong excitation and inhibition cancel on average, and the
 activity they produce is irregular and chaotic. Can such a network still hold a continuous value,
@@ -65,6 +75,8 @@ network can serve as a working memory despite its own internal noise. Presented 
 **N. Shaham, T. Piran** · *Physical Review Letters* 110, 021101 (2013) ·
 [Paper](https://doi.org/10.1103/PhysRevLett.110.021101) ·
 [arXiv](https://arxiv.org/abs/1204.1488)
+
+<figure class="sim" data-sim="shower"><figcaption>A cosmic ray hits the top of the atmosphere and cascades into a shower of particles. How deep the shower peaks (Xmax) is the measurement the paper is about. A cartoon, not a physics simulation; see the <a href="https://arxiv.org/abs/1204.1488">arXiv version</a>.</figcaption></figure>
 
 From my MSc in high-energy astrophysics. Measurements of how deep the highest-energy cosmic rays
 penetrate the atmosphere seemed to say they are heavy nuclei, while other evidence pointed to

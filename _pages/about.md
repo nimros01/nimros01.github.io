@@ -3,6 +3,7 @@ permalink: /
 title: "Nimrod Shaham"
 excerpt: "About me"
 author_profile: true
+hero: true
 redirect_from:
   - /about/
   - /about.html
@@ -18,10 +19,8 @@ What ties it together is a love for complex, chaotic and stochastic systems, and
 them into models and simulations that actually run. Outside work I build small apps for myself
 and my family, hike in the desert, bike, cook and read (mostly science fiction).
 
-## On this site
-
-- **[Research](/research/)**: my published papers, each with a short summary and a link, plus my
-  academic background.
-- **[Mobileye](/mobileye/)**: what I do in autonomous driving.
-- **[Personal projects](/projects/)**: apps I've built end to end, with the architecture, the hard
-  parts and how I solved them.
+<div class="grid-3">
+  <a class="card" href="/research/"><span class="k">MODULE 01</span><h4>./research</h4><p>Published papers on memory in noisy neural networks and ultra-high-energy cosmic rays, each with a short summary and a link.</p></a>
+  <a class="card" href="/mobileye/"><span class="k">MODULE 02</span><h4>./mobileye</h4><p>Decision-making and planning for autonomous driving, and leading an algorithms team.</p></a>
+  <a class="card" href="/projects/"><span class="k">MODULE 03</span><h4>./projects</h4><p>Apps I've built end to end, with the architecture, the hard parts and how I solved them.</p></a>
+</div>

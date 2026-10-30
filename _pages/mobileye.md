@@ -1,8 +1,9 @@
 ---
-layout: single
+layout: scifi
 title: "Work at Mobileye"
 permalink: /mobileye/
 author_profile: true
+tagline: "decision-making and planning for self-driving cars"
 redirect_from:
   - /work/
 ---
@@ -47,6 +48,30 @@ driving policy that uses it.
 
 Much of the job happens between teams. I work with groups across Mobileye to integrate the outputs
 of perception models into decision-making, and to agree on the requirements that connect the two.
+
+## Watch: Mobileye's self-driving tech
+
+Public videos from Mobileye and Intel that show what this kind of work looks like on the road.
+More on [Mobileye's YouTube channel](https://www.youtube.com/mobileye).
+
+<div class="videos">
+  <div class="video">
+    <button class="frame" data-yt="hCWL0XF_f8Y" aria-label="Play: Unedited ride in a camera-only autonomous car"><img src="https://i.ytimg.com/vi/hCWL0XF_f8Y/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play"></span></button>
+    <div class="meta"><span class="k">CES 2020</span><h4>Unedited ride in a camera-only autonomous car</h4><p>About 20 minutes through Jerusalem traffic, driven by cameras alone.</p></div>
+  </div>
+  <div class="video">
+    <button class="frame" data-yt="kJD5R_yQ9aw" aria-label="Play: 40-minute unedited robotaxi ride through Jerusalem"><img src="https://i.ytimg.com/vi/kJD5R_yQ9aw/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play"></span></button>
+    <div class="meta"><span class="k">2021</span><h4>40-minute unedited robotaxi ride through Jerusalem</h4><p>A robotaxi handling dense, messy city traffic, with no cuts.</p></div>
+  </div>
+  <div class="video">
+    <button class="frame" data-yt="B7YNj66GxRA" aria-label="Play: Under the Hood with Prof. Amnon Shashua"><img src="https://i.ytimg.com/vi/B7YNj66GxRA/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play"></span></button>
+    <div class="meta"><span class="k">CES 2021</span><h4>Under the Hood with Prof. Amnon Shashua</h4><p>Mobileye's CEO on the technology behind its self-driving systems.</p></div>
+  </div>
+  <div class="video">
+    <button class="frame" data-yt="VUI85RtI3O0" aria-label="Play: Annual address by Prof. Amnon Shashua"><img src="https://i.ytimg.com/vi/VUI85RtI3O0/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play"></span></button>
+    <div class="meta"><span class="k">CES 2026</span><h4>Annual address by Prof. Amnon Shashua</h4><p>Where the technology and the products are heading next.</p></div>
+  </div>
+</div>
 
 ---
 

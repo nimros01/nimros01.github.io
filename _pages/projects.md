@@ -1,10 +1,11 @@
 ---
-layout: single
+layout: scifi
 title: "Personal projects"
 permalink: /projects/
 author_profile: true
 toc: true
 toc_label: "Projects"
+tagline: "complete products, built end to end in my own time"
 ---
 
 Things I build in my own time, mostly for myself and my family. Each one is a complete product:
@@ -16,6 +17,13 @@ that were hard, and how I solved them.
 A self-hosted investment tracker for the household: several portfolios with sharing between
 family members, live prices, dividends, RSU vesting, ILS/USD conversion, loans and credit balances,
 before- and after-tax estimates, and history charts.
+
+<figure class="shot"><img src="/assets/scifi/projects/portfolio-dashboard.jpg" alt="Portfolio tracker dashboard" loading="lazy"><figcaption>dashboard, from the built-in demo account (all holdings invented)</figcaption></figure>
+
+<div class="shots">
+  <figure class="shot"><img src="/assets/scifi/projects/portfolio-history.jpg" alt="value history from daily snapshots" loading="lazy"><figcaption>value history from daily snapshots</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/portfolio-assets.jpg" alt="assets with dividends and after-tax estimates" loading="lazy"><figcaption>assets with dividends and after-tax estimates</figcaption></figure>
+</div>
 
 ### Architecture
 
@@ -114,6 +122,12 @@ A math adventure game for kids that runs in a phone browser. It relies on pictur
 sound, so children who can't read yet can play. It covers counting through times tables, shapes
 and puzzles across several themed worlds. [Source on GitHub](https://github.com/nimros01/math-wonderland).
 
+<div class="shots phone">
+  <figure class="shot"><img src="/assets/scifi/projects/math-title.jpg" alt="title screen" loading="lazy"><figcaption>title screen</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/math-map.jpg" alt="world map of stages" loading="lazy"><figcaption>world map of stages</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/math-question.jpg" alt="a question, with the answer hint" loading="lazy"><figcaption>a question, with the answer hint</figcaption></figure>
+</div>
+
 ### Architecture
 
 ```
@@ -150,6 +164,12 @@ A memory training game for the whole family. Players climb a ladder of stages th
 remembering objects, numbers, flipped tiles and the order of events, and learn real memory
 techniques along the way.
 
+<div class="shots phone">
+  <figure class="shot"><img src="/assets/scifi/projects/recall-home.jpg" alt="pick a player and a level" loading="lazy"><figcaption>pick a player and a level</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/recall-stage.jpg" alt="memorize, then recall" loading="lazy"><figcaption>memorize, then recall</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/recall-training.jpg" alt="training: memory techniques" loading="lazy"><figcaption>training: memory techniques</figcaption></figure>
+</div>
+
 ### Architecture
 
 ```
@@ -181,6 +201,11 @@ Service worker for offline play; served as static assets from Cloudflare
 Describe a mood, a moment or a memory in your own words, and get a real playlist created in your
 Spotify or Tidal account. A language model picks the songs; the app finds them in the streaming
 catalog and builds the playlist.
+
+<div class="shots phone">
+  <figure class="shot"><img src="/assets/scifi/projects/mixer-describe.jpg" alt="describe a mood" loading="lazy"><figcaption>describe a mood</figcaption></figure>
+  <figure class="shot"><img src="/assets/scifi/projects/mixer-playlist.jpg" alt="the playlist it built (demo output)" loading="lazy"><figcaption>the playlist it built (demo output)</figcaption></figure>
+</div>
 
 ### Architecture
 
